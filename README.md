@@ -1,2 +1,4 @@
-# laravel-app
-Create app using Laravel 10
+# Create app using Laravel 10
+Feature:
+- Login using multi auth
+
