@@ -1,7 +1,8 @@
 # Create app using Laravel 10
 ### Still learning about using laravel 10 and willing to develop the app.
 ### Feature:
-- Login using multi auth
+- Login using multi auth (need to upgrade)
+- CRUD (still working on)
 
 #### Standar push github (untuk upload ke github)
 * git status
