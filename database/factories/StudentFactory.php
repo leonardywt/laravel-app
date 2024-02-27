@@ -18,7 +18,7 @@ class StudentFactory extends Factory
     {
         return [
             'email' => 'student@gmail.com',
-            'password' => '$2y$12$EE/D6fi6YFrsSoZ2v9ITpehJuQe2SPdAy/UO/wbbZTIhc9w8uYygW',
+            'password' => '$2y$12$vtpAYwOh1ptSUJSshksJY.9POJckRBHi7y/MAyXpFGAJYoKtJSGZi',
             'name' => 'student'
         ];
     }

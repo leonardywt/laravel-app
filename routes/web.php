@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -69,4 +70,26 @@ Route::middleware('student')->group(function () {
         });
 /////////////////////////////////////////////////////////////
 
-Route::get('categories', [CategoryController::class,'index']);
+Route::get('posts', [PostController::class, 'index'])
+    ->name('posts')
+    ->middleware('auth');
+
+Route::get('posts/create', [PostController::class, 'create'])
+    ->name('posts.create')
+    ->middleware('auth');
+
+Route::post('posts', [PostController::class, 'store'])
+    ->name('posts.store')
+    ->middleware('auth');
+
+Route::get('posts/{post}/edit', [PostController::class, 'edit'])
+    ->name('posts.edit')
+    ->middleware('auth');
+
+Route::put('posts/{post}', [PostController::class, 'update'])
+    ->name('posts.update')
+    ->middleware('auth');
+
+Route::delete('posts/{post}', [PostController::class, 'destroy'])
+    ->name('posts.destroy')
+    ->middleware('auth');
